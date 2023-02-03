@@ -77,6 +77,7 @@ import IconCicle from './icons/IconCicle.vue';
     margin: auto;
     border-radius: 10px;
     box-shadow: 0px 3px 3px -3px #000;
+    max-width: 900px;
 }
 
 .btn {
