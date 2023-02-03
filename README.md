@@ -2,7 +2,7 @@
 
 ## Como executar:
 ```
-- docker-compsoe up
+- docker-compose up
 ```
 
 ##### Frontend
