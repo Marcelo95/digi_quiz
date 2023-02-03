@@ -10,8 +10,6 @@ export default function personHandler(
   const { quizId } = query
   
 
-
-  // User with id exists
   return questions
     ? res.status(200).json(questions)
     : res.status(404).json({ message: `Error` })
