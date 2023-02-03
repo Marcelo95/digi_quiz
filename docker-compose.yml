@@ -1,0 +1,27 @@
+  
+version: '3.4'
+services:
+  frontend:
+    image: node:lts
+    tty: true
+    ports:
+      - "8000:8000" #frontend
+      - "3000:3000" #backend
+    container_name: node-app
+    working_dir: /var/www/html/app/
+    volumes:
+       - ./frontend:/var/www/html/app/frontend
+       - ./backend:/var/www/html/app/backend
+    command: 
+        - /bin/bash
+        - -c
+        - |
+          npm install -g npm@9.4.1 
+          cd ./frontend 
+          npm install 
+          (npm run dev&)
+          cd ../backend
+          npm install 
+          (npm run dev)
+    environment:
+      NODE_ENV: development
