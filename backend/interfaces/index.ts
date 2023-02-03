@@ -1,12 +1,10 @@
-export type Person = {
-  id: string
-  name: string
-  height: string
-  mass: string
-  hair_color: string
-  skin_color: string
-  eye_color: string
-  gender: string
+export type Questions = {
+  category: string
+  type: string
+  difficulty: string
+  question: string
+  correct_answer: string
+  incorrect_answers: Array<string>
 }
 
 export type ResponseError = {
